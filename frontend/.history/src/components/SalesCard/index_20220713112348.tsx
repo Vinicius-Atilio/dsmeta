@@ -19,7 +19,9 @@ function SalesCard() {
                     <div className="dsmeta-form-control-container">
                         <DatePicker
                             selected={minDate}
-                            onChange={(date: Date) => setMinDate(date)}
+                            onChange={(date: Date) => {
+                                setMinDate;
+                            }}
                             className="dsmeta-form-control"
                             dateFormat="dd/MM/yyyy"
                         />
@@ -27,7 +29,9 @@ function SalesCard() {
                     <div className="dsmeta-form-control-container">
                         <DatePicker
                             selected={maxDate}
-                            onChange={(date: Date) => setMaxDate(date)}
+                            onChange={(date: Date) => {
+                                setMaxDate;
+                            }}
                             className="dsmeta-form-control"
                             dateFormat="dd/MM/yyyy"
                         />

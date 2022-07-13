@@ -5,11 +5,8 @@ import NotificationButton from '../NotificationButton';
 import './styles.css';
 
 function SalesCard() {
-    const min = new Date(new Date().setDate(new Date().getDate() - 365));
-    const max = new Date();
-
-    const [minDate, setMinDate] = useState(min);
-    const [maxDate, setMaxDate] = useState(max);
+    const [minDate, setMinDate] = useState(new Date());
+    const [maxDate, setMaxDate] = useState(new Date());
 
     return (
         <>
@@ -19,7 +16,9 @@ function SalesCard() {
                     <div className="dsmeta-form-control-container">
                         <DatePicker
                             selected={minDate}
-                            onChange={(date: Date) => setMinDate(date)}
+                            onChange={(date: Date) => {
+                                setMinDate;
+                            }}
                             className="dsmeta-form-control"
                             dateFormat="dd/MM/yyyy"
                         />
@@ -27,7 +26,9 @@ function SalesCard() {
                     <div className="dsmeta-form-control-container">
                         <DatePicker
                             selected={maxDate}
-                            onChange={(date: Date) => setMaxDate(date)}
+                            onChange={(date: Date) => {
+                                setMaxDate;
+                            }}
                             className="dsmeta-form-control"
                             dateFormat="dd/MM/yyyy"
                         />
