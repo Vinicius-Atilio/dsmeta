@@ -1,13 +1,14 @@
 package com.devsuperior.dsmeta.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
 import com.devsuperior.dsmeta.entities.Sale;
 import com.devsuperior.dsmeta.repositories.SaleRepository;
 import com.twilio.Twilio;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
 
 @Service
 public class SmsService {
@@ -26,6 +27,7 @@ public class SmsService {
 
     @Autowired
     private SaleRepository saleRepository;
+
     public void sendSms(Long saleId) {
 
         Sale sale = saleRepository.findById(saleId).get();

@@ -1,9 +1,12 @@
 package com.devsuperior.dsmeta.entities;
 
-import com.sun.istack.NotNull;
-
-import javax.persistence.*;
 import java.time.LocalDate;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Table(name = "tb_sales")
@@ -11,7 +14,6 @@ public class Sale {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @NotNull
     private Long id;
     private String sellerName;
     private Integer visited;
@@ -21,8 +23,6 @@ public class Sale {
 
     public Sale() {
     }
-
-
 
     public Long getId() {
         return id;
